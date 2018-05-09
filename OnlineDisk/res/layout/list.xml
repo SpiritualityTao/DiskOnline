@@ -1,0 +1,42 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    tools:context="com.pt.filemanager.MainActivity" >
+
+    <com.pt.MyView.Topbar 
+         android:id="@+id/topbar"
+       	 android:layout_width="match_parent"
+   		 android:layout_height="60dp"
+   		 custom:leftTextColor="#FFFFFF"
+   		 custom:leftBackground="#0000FF"
+   		 custom:leftText="Back"
+   		 custom:rightTextColor="#FFFFFF"
+   		 custom:rightBackground="#0000FF"
+   		 custom:rightText="上传"
+   		 custom:title="选择文件"
+   		 custom:titleTextColor="#124512"
+   		 custom:titleTextSize="1sp" >
+        
+    </com.pt.MyView.Topbar>
+    
+    <TextView 
+        android:layout_marginLeft="20dp"
+        android:id="@+id/tv_path"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    
+    <ListView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/listview" />
+
+   
+</LinearLayout>

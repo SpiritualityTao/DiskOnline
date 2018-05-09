@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <ImageView 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/topbar"/>
+         <!-- border_outside_color 外部圆圈的颜色 --> 
+	    <!-- border_inside_color 内部部圆圈的颜色 --> 
+	    <!-- border_thickness 外圆和内圆的宽度 --> 
+	    <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+	        <com.pt.MyView.RoundImageView 
+	            android:id="@+id/image_head"
+	            android:layout_marginLeft="10dp" 
+	            android:layout_marginTop="5dp"
+		        android:layout_width="65dp" 
+		        android:layout_height="65dp" 
+		        custom:border_thickness="2dp"
+		        custom:border_outside_color="#d6d6d6"
+		        android:src="@drawable/head" 
+		        /> 
+	        <TextView 
+	            android:id="@+id/tv_username"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:textColor="@android:color/white"
+	            android:gravity="center"
+	            android:layout_marginLeft="10dp"
+	            android:textSize="20sp"/>
+        </LinearLayout>
+    </FrameLayout>
+ 
+		<LinearLayout 
+		    android:orientation="horizontal"
+		    android:layout_width="match_parent"
+		    android:divider="@android:drawable/dialog_holo_light_frame"
+		    android:background="@android:color/darker_gray"
+		    android:layout_height="55dp">
+	        <ImageButton
+	     		android:id="@+id/create_folder"
+	           	android:layout_weight="1"
+	           	android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:src="@drawable/create_folder" />
+	
+	        <ImageButton 
+	            android:layout_weight="1"
+	           	android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:src="@drawable/search"
+	            />
+	        <ImageButton 
+	            android:layout_weight="1"
+	           	android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:src="@drawable/ic_launcher"
+	            />
+       </LinearLayout>
+   
+	<ListView 
+	    android:id="@+id/main_listview"
+	    android:layout_weight="5"
+	    android:layout_width="match_parent" 
+	    android:layout_height="0dp"/>
+	<LinearLayout 
+	    	android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:layout_width="match_parent"
+		    android:divider="@android:drawable/dialog_holo_light_frame"
+		    android:background="@android:color/darker_gray"
+		    android:layout_height="0dp">
+	    <ImageButton
+	        android:layout_weight="1"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/upload"
+	        android:id="@+id/ib_upload"/>
+	    <ImageButton
+	         android:layout_weight="1"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/download"
+	        android:id="@+id/ib_download"/>
+	    
+	 </LinearLayout>
+	
+</LinearLayout>
